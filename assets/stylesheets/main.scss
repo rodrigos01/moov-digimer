@@ -1,0 +1,26 @@
+// Reset file for standardizing the page
+// @import "globals/_reset";
+
+// Import Bourbon
+@import "globals/bourbon/_bourbon.scss";
+
+
+// File for global Uranium stylings
+@import "globals/_uranium.scss";
+
+// Vertical rhythmic
+@import "globals/_vertical_rhythmic";
+
+// Site wide variables and libarary of mixins and classes
+@import "globals/_variables.scss";
+@import "globals/_lib.scss";
+
+// Import global base styles
+@import "globals/_base";
+
+// Header & Footer
+@import "sections/_header";
+@import "sections/_footer";
+
+// Pages
+@import "pages/_home";
