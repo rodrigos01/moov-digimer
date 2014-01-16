@@ -1,0 +1,38 @@
+$icons-url: url("/_moovweb_local_assets_/images/icons.png");
+
+$icons-width: 36px;
+$icons-height: 65px;
+
+$icons-cart-x: 0px;
+$icons-cart-y: 0px;
+$icons-cart-width: 36px;
+$icons-cart-height: 32px;
+
+$icons-user-x: 0px;
+$icons-user-y: -33px;
+$icons-user-width: 32px;
+$icons-user-height: 32px;
+
+@mixin icons-cart() {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px 0px;
+  width: 36px;
+  height: 32px;
+}
+
+@mixin icons-user() {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -33px;
+  width: 32px;
+  height: 32px;
+}
+
+.icons-cart {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px 0px;
+  width: 36px;
+  height: 32px;
+}
+
+.icons-user {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -33px;
+  width: 32px;
+  height: 32px;
+}

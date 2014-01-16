@@ -1,0 +1,21 @@
+$sprites-url: url("/_moovweb_local_assets_/images/sprites.png");
+
+$sprites-width: 68px;
+$sprites-height: 32px;
+
+$sprites-logo-x: 0px;
+$sprites-logo-y: 0px;
+$sprites-logo-width: 68px;
+$sprites-logo-height: 32px;
+
+@mixin sprites-logo() {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
+  width: 68px;
+  height: 32px;
+}
+
+.sprites-logo {
+  background: url("/_moovweb_local_assets_/images/sprites.png") no-repeat 0px 0px;
+  width: 68px;
+  height: 32px;
+}

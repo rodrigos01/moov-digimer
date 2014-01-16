@@ -1,6 +1,11 @@
 // Reset file for standardizing the page
 // @import "globals/_reset";
 
+// Import sprites
+@import "globals/_sprites";
+// Import Icons
+@import "globals/_icons.scss";
+
 // Import Bourbon
 @import "globals/bourbon/_bourbon.scss";
 

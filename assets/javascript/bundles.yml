@@ -7,6 +7,9 @@
   - http://downloads.moovweb.com/plutonium/0.1.73/gsub.js
   - http://downloads.moovweb.com/plutonium/0.1.73/passthrough_ajax.js
   - http://downloads.moovweb.com/plutonium/0.1.68/auto_scroll.js
+  - https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
+  - https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js
+  - application.js
 
 
 
