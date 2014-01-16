@@ -23,8 +23,9 @@
 // Import global base styles
 @import "globals/_base";
 
-// Header & Footer
+// contents
 @import "sections/_header";
+@import "sections/_content";
 @import "sections/_footer";
 
 // Pages

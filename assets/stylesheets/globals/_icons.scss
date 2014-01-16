@@ -1,15 +1,20 @@
 $icons-url: url("/_moovweb_local_assets_/images/icons.png");
 
 $icons-width: 36px;
-$icons-height: 65px;
+$icons-height: 98px;
 
 $icons-cart-x: 0px;
 $icons-cart-y: 0px;
 $icons-cart-width: 36px;
 $icons-cart-height: 32px;
 
+$icons-menu-x: 0px;
+$icons-menu-y: -33px;
+$icons-menu-width: 32px;
+$icons-menu-height: 32px;
+
 $icons-user-x: 0px;
-$icons-user-y: -33px;
+$icons-user-y: -66px;
 $icons-user-width: 32px;
 $icons-user-height: 32px;
 
@@ -19,8 +24,14 @@ $icons-user-height: 32px;
   height: 32px;
 }
 
-@mixin icons-user() {
+@mixin icons-menu() {
   background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -33px;
+  width: 32px;
+  height: 32px;
+}
+
+@mixin icons-user() {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -66px;
   width: 32px;
   height: 32px;
 }
@@ -31,8 +42,14 @@ $icons-user-height: 32px;
   height: 32px;
 }
 
-.icons-user {
+.icons-menu {
   background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -33px;
+  width: 32px;
+  height: 32px;
+}
+
+.icons-user {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -66px;
   width: 32px;
   height: 32px;
 }

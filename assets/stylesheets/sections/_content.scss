@@ -1,0 +1,33 @@
+div._content {
+	a.button {
+		@include button();
+		float: left;
+		marging: 0 9px;
+	}
+
+	form[name='busca'] {
+		position: relative;
+		margin-left: 50px;
+		@include form();
+
+		input {
+			width: 100%;
+		}
+	}
+
+	div.central {
+
+	}
+
+	div.menu {
+		display: none;
+		position: absolute;
+		top: 85;
+		width: 100%;
+
+		div.menu_categoria, div.menu_categoria_primeira {
+			background-image: url('https://mlocal.digimer.com.br:8443/themes/digimer/images2/menu_categoria_primeira.jpg');
+			background-repeat: repeat-x;
+		}
+	}
+}
