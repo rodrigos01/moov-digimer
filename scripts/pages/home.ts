@@ -1,3 +1,3 @@
-$$(body) {
-	add_class("_homee")
+$$("body") {
+	add_class("_home")
 }

@@ -10,7 +10,7 @@ $("/html") {
 
     
   # Needed to begin mobilizing
-  remove_all_styles()
+  #remove_all_styles()
   remove_html_comments()
 
   # Late load all the images on the site
@@ -21,7 +21,9 @@ $("/html") {
 
   add_assets()
 
+  @import sections/script.ts
   @import sections/header.ts
+  @import sections/content.ts
   @import sections/footer.ts
 
   @import mappings.ts

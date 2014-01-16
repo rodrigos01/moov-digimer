@@ -24,7 +24,7 @@ match($status) {
       }
       with(/handler\.php\?module=site&action=view&#buscar|handler\.php\?module=site&action=view&#afinidade/) {
         log("--> Importing pages/category.ts in mappings.ts")
-        @import pages/product.ts
+        @import pages/category.ts
       }
       with(/handler\.php\?module=site&action=view&#produto/) {
         log("--> Importing pages/product.ts in mappings.ts")
