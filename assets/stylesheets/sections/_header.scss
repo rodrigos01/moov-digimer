@@ -1,17 +1,21 @@
 header._header {
 		background-color: #FD9E0C;
 		height: 32px;
-		padding: 9px;
+		padding: 9px 0;
+		position: fixed;
+		width: 100%;
+		z-index: 3;
 
 		a.sprites-logo {
 			@include button();
 			width: 68px;
+			margin: 0 1em;
 		}
 
 		a.button {
 			@include button();
 			background-color: #FFF;
-			margin-left: 1em;
+			margin: 0 0.5em;
 			float: right;
 		}
 

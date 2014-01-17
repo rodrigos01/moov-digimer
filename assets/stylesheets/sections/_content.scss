@@ -1,4 +1,35 @@
 div._content {
+	padding-top: 50px;
+
+	div.pannel {
+		background-color: white;
+		width: 100%;
+		position: fixed;
+		z-index: 3;
+
+
+		a.button {
+			@include button();
+			float: left;
+			margin: 0 9px;
+		}
+
+		a.icons-menu {
+			display: none;
+		}
+
+		form[name='busca'] {
+			position: relative;
+			margin-right: 50px;
+			@include form();
+
+			input {
+				width: 100%;
+			}
+		}
+
+	}
+
 
 	#backblock {
 		background-color: #000000;
@@ -12,34 +43,15 @@ div._content {
 		z-index: 1;
 	}
 
-	a.button {
-		@include button();
-		float: left;
-		margin: 0 9px;
-	}
-
-	a.icons-menu {
-		display: none;
-	}
-
-	form[name='busca'] {
-		position: relative;
-		margin-right: 50px;
-		@include form();
-
-		input {
-			width: 100%;
-		}
-	}
-
 	div#central {
 		position: relative;
-		margin-left: 180px;
+		margin-left: 230px;
+		margin-top: 33px;
 
 		div.lista_produto {
 			float: left;
 			width: 43%;
-			min-width: 310px;
+			min-width: 285px;
 			height: 159px;
 			margin: 2em;
 
@@ -60,12 +72,25 @@ div._content {
 		position: absolute;
 		top: 85;
 		left: 0;
-		width: 180px;
+		width: 230px;
 		z-index: 2;
 
 		div.menu_categoria, div.menu_categoria_primeira {
 			background-image: url('https://mlocal.digimer.com.br:8443/themes/digimer/images2/menu_categoria_primeira.jpg');
 			background-repeat: repeat-x;
+		}
+
+		div.menu_sub1, div.menu_sub2 {
+			height: auto;
+			margin-left: 0;
+
+			a {
+				height: auto;
+				padding-top: 0;
+				font-size: 14px;
+				display: block;
+				padding: 5px;
+			}
 		}
 	}
 }
@@ -86,25 +111,27 @@ div._content {
 @media all and (max-device-width: 800px) , (max-width: 800px) {
 	div._content {
 
+		div.pannel {
+			a.icons-menu {
+				display: inline-block;
+			}
+
+			form[name='busca'] {
+				margin-left: 50px;
+			}
+		}
+
 		#backblock.active {
 			height: 100%;
 			opacity: 0.6;
 		}
 
-		a.icons-menu {
-			display: inline-block;
-		}
-
-		form[name='busca'] {
-			margin-left: 50px;
-		}
-
 		div#central {
-			margin: 0;
+			margin-left: 0;
 		}
 
 		div.menu {
-			left: -180px;
+			left: -230px;
 			transition: left 0.2s ease-in-out;
     		-webkit-transition: left 0.2s ease-in-out; /* Safari */
 		}
