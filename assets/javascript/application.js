@@ -11,7 +11,7 @@ function listeners() {
 
 	$j("a.icons-menu").click(function(e) {
 		e.preventDefault();
-		$j(".menu").toggle("slide", {direction: "up"});
+		$j(".menu").toggleClass("active");
 		e.stopPropagation();
 	});
 }

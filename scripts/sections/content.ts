@@ -12,11 +12,15 @@ $('./body/header') {
       $("div[@id='listagem']/table[1]") {
         attribute("width", "100%");
       }
+      move_here(".//div[@class='lista_produto']");
+      remove("div[@id='listagem']/table[not(@width='100%')]");
+      remove("div[@id='listagem']/img");
     };
 
+    insert("div", id: "backblock", class: "menu");
   	insert("div", class: "menu") {
   		move_here("//td[@class='menu']") {
-        remove("//img");
+        remove(".//img");
       }
   		remove(".//table");
   	}

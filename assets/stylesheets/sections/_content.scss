@@ -1,13 +1,30 @@
 div._content {
+
+	#backblock {
+		background-color: #000000;
+		position: fixed;
+		height: 0;
+		width: 100%;
+		opacity: 0;
+		padding-top: 50px;
+		transition: opacity 0.2s;
+		-webkit-transition: opacity 0.2s ; /* Safari */
+		z-index: 1;
+	}
+
 	a.button {
 		@include button();
 		float: left;
-		marging: 0 9px;
+		margin: 0 9px;
+	}
+
+	a.icons-menu {
+		display: none;
 	}
 
 	form[name='busca'] {
 		position: relative;
-		margin-left: 50px;
+		margin-right: 50px;
 		@include form();
 
 		input {
@@ -15,19 +32,85 @@ div._content {
 		}
 	}
 
-	div.central {
+	div#central {
+		position: relative;
+		margin-left: 180px;
 
+		div.lista_produto {
+			float: left;
+			width: 43%;
+			min-width: 310px;
+			height: 159px;
+			margin: 2em;
+
+			.imagem {
+				float: left;
+				margin: 8px;
+				height: 120px;
+
+				img {
+					height: 100%;
+				}
+
+			}
+		}
 	}
 
 	div.menu {
-		display: none;
 		position: absolute;
 		top: 85;
-		width: 100%;
+		left: 0;
+		width: 180px;
+		z-index: 2;
 
 		div.menu_categoria, div.menu_categoria_primeira {
 			background-image: url('https://mlocal.digimer.com.br:8443/themes/digimer/images2/menu_categoria_primeira.jpg');
 			background-repeat: repeat-x;
+		}
+	}
+}
+
+@media all and (max-device-width: 880px) , (max-width: 880px) {
+
+	div._content {
+
+		div#central {
+			div.lista_produto {
+				float: none;
+				width: 93%;
+			}
+		}
+	}
+}
+
+@media all and (max-device-width: 800px) , (max-width: 800px) {
+	div._content {
+
+		#backblock.active {
+			height: 100%;
+			opacity: 0.6;
+		}
+
+		a.icons-menu {
+			display: inline-block;
+		}
+
+		form[name='busca'] {
+			margin-left: 50px;
+		}
+
+		div#central {
+			margin: 0;
+		}
+
+		div.menu {
+			left: -180px;
+			transition: left 0.2s ease-in-out;
+    		-webkit-transition: left 0.2s ease-in-out; /* Safari */
+		}
+
+		div.menu.active {
+			left: 0;
 		}
 	}
 }
