@@ -48,6 +48,30 @@ div._content {
 		margin-left: 230px;
 		margin-top: 33px;
 
+		div#listagem {
+
+			table:first-child {
+				max-width: 580px;
+
+				div.product_description {
+					position: relative;
+					margin-right: 120px;
+				}
+
+				div.product_image {
+					float: right;
+					width: 120px;	
+				}
+
+				div.controles {
+					margin: 0 auto;
+					width: 221px;
+				}
+
+			}
+
+		}
+
 		div.lista_produto {
 			float: left;
 			width: 43%;
@@ -128,6 +152,13 @@ div._content {
 
 		div#central {
 			margin-left: 0;
+
+			div#listagem {
+
+				table:first-child {
+					margin: 0 auto;
+				}
+			}
 		}
 
 		div.menu {

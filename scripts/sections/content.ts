@@ -16,6 +16,25 @@ $('./body/header') {
   	move_here("//div[@id='central']") {
       $("div[@id='listagem']/table[1]") {
         attribute("width", "100%");
+
+        $("./tr[2]/td[2]") {
+          insert("div", class: "controles") {
+            move_here("../../../tr[3]/td[2]/table/tr[1]/td[2]/span/*");
+          }
+          $("./span") {
+            insert("div", class: "product_description") {
+              move_here("../table/tr[1]/td[1]/*");
+            }
+            insert_at("top", "div", class: "product_image") {
+              move_here("../table/tr[1]/td[2]/*");
+            }
+            remove("./table");
+          }
+        }
+        $("./tr[3]/td[2]/table") {
+          attribute("width", "auto");
+        }
+
       }
       move_here(".//div[@class='lista_produto']");
       remove("div[@id='listagem']/table[not(@width='100%')]");

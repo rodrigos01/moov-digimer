@@ -27,5 +27,7 @@ $('./body') {
   insert_javascript_at("bottom", "listeners()");
 
   remove(".//p");
+
+  remove(".//div[@id='ban7']");
 }
 
