@@ -1,7 +1,5 @@
 /* Default JS */
 
-var $j = jQuery.noConflict();
-
 function listeners() {
 	$j("a.icons-user").click(function(e) {
 		e.preventDefault();
