@@ -18,7 +18,7 @@ match($status) {
     log("--> STATUS: 200")
 
     match($path) {
-      with(/handler\.php\?module=site&action=view&$/) {
+      with(/handler\.php\?module=site&action=view/) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }

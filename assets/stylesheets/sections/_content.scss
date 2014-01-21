@@ -112,10 +112,14 @@ div._content {
 
 	div.menu {
 		position: absolute;
-		top: 85;
+		top: 0;
 		left: 0;
 		width: 230px;
 		z-index: 2;
+
+		div.menu_categoria_primeira {
+			margin-top: 83px
+		}
 
 		div.menu_categoria, div.menu_categoria_primeira {
 			background-image: url('https://mlocal.digimer.com.br:8443/themes/digimer/images2/menu_categoria_primeira.jpg');
@@ -135,9 +139,13 @@ div._content {
 			}
 		}
 	}
+
+	div.menu::-webkit-scrollbar { 
+	    display: none; 
+	}
 }
 
-@media all and (max-device-width: 970px) , (max-width: 970px) {
+@media all and (max-width: 970px) {
 
 	div._content {
 
@@ -183,9 +191,12 @@ div._content {
 		}
 
 		div.menu {
+			position: fixed;
 			left: -230px;
 			transition: left 0.2s ease-in-out;
     		-webkit-transition: left 0.2s ease-in-out; /* Safari */
+			height: 100%;
+			overflow: auto;
 		}
 
 		div.menu.active {

@@ -1,15 +1,9 @@
-log("--> Running ajax.ts")
+$("//form[@name='comprar']") {
+	log("--> Importing product.ts.");
+	@import pages/product.ts
+}
 
-# match($path) {
-#   # Match the Ajax path
-#   with(/foo/) {
-#     html_fragment() {
-#       log("--> Importing ajax/foo.ts in ajax.ts")
-#       @import ajax/foo.ts
-#     }
-#   }
-# }
-
-# needed for product images
-# replace("%24", "$")
-# replace("&amp;", "&")
+$("../"){
+	move_here("/body/*");
+}
+#remove("/html");

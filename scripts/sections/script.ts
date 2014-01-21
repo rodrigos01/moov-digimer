@@ -1044,5 +1044,5 @@ function go2index() {
   //window.location = window.location.href.split('#')[0];
   window.location.reload();
 }
-//document.onload = initialize();");
+document.onload = initialize();");
 }

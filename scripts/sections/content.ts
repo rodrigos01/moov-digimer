@@ -13,28 +13,10 @@ $('./body/header') {
       
     }
 
+    
   	move_here("//div[@id='central']") {
-
-      insert("div", id: "destaques") {
-        insert("h1", "DESTAQUES");
-        move_here("../div[@id='listagem']/table[1]/tr[2]/td[2]/*") {
-          insert("div", class: "product_description") {
-            move_here("../table/tr[1]/td[1]/*");
-          }
-          insert_at("top", "div", class: "product_image") {
-            move_here("../table/tr[1]/td[2]/*");
-          }
-          remove("./table");
-        }
-        insert("div", class: "controles") {
-          move_here("../../div[@id='listagem']/table[1]/tr[3]/td[2]/table/tr[1]/td[2]/span/*");
-        }
-      }
-
-      move_here(".//div[@class='lista_produto']") {
-        insert("div", class: "border");
-      }
-    };
+      @import central.ts
+    }
 
     insert("div", id: "backblock", class: "menu");
   	insert("div", class: "menu") {
@@ -42,6 +24,8 @@ $('./body/header') {
         remove(".//img");
       }
   		remove(".//table");
+      remove(".//div[@class='menu_sub1_f']")
+      remove(".//div[@class='menu_sub2_f']")
   	}
   }
 }
@@ -49,5 +33,4 @@ $('./body/header') {
 $('./body') {
   remove(".//table[@id='conteudo_table']");
   remove(".//table[@id='rodape_table']");
-  remove(".//div[@id='listagem']");
 }
