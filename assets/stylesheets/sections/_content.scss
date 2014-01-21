@@ -1,3 +1,7 @@
+div.clearfix {
+	clear: both;
+}
+
 div._content {
 	padding-top: 50px;
 
@@ -46,12 +50,24 @@ div._content {
 	div#central {
 		position: relative;
 		margin-left: 230px;
-		margin-top: 33px;
+		margin-top: 45px;
 
-		div#listagem {
+		div#destaques {
+			margin: 1em;
+			padding: 0.5em;
+			border-radius: 10px;
+			box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6);
 
-			table:first-child {
-				max-width: 580px;
+			h1 {
+				margin: 0;
+				margin-bottom: 0.5em;
+				padding-bottom: 0.3em;
+				border-bottom: #004467 thin solid;
+				font-size: 1.5em;
+				color: #004467;
+			}
+
+			span {
 
 				div.product_description {
 					position: relative;
@@ -63,21 +79,23 @@ div._content {
 					width: 120px;	
 				}
 
-				div.controles {
-					margin: 0 auto;
-					width: 221px;
-				}
+			}
 
+			div.controles {
+				margin: 0 auto;
+				width: 221px;
 			}
 
 		}
 
 		div.lista_produto {
 			float: left;
-			width: 43%;
-			min-width: 285px;
-			height: 159px;
-			margin: 2em;
+			width: 50%;
+			height: 230px;
+			padding: 2em;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
 
 			.imagem {
 				float: left;
@@ -126,7 +144,17 @@ div._content {
 		div#central {
 			div.lista_produto {
 				float: none;
-				width: 93%;
+				clear: both;
+				width: 100%;
+				height: auto;
+				padding: 1em 2em;
+
+				div.border {
+					clear: both;
+					border-bottom: #FFA500 solid;
+					height: 2em;
+				}
+
 			}
 		}
 	}
@@ -152,13 +180,6 @@ div._content {
 
 		div#central {
 			margin-left: 0;
-
-			div#listagem {
-
-				table:first-child {
-					margin: 0 auto;
-				}
-			}
 		}
 
 		div.menu {

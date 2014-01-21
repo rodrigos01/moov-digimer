@@ -14,31 +14,26 @@ $('./body/header') {
     }
 
   	move_here("//div[@id='central']") {
-      $("div[@id='listagem']/table[1]") {
-        attribute("width", "100%");
 
-        $("./tr[2]/td[2]") {
-          insert("div", class: "controles") {
-            move_here("../../../tr[3]/td[2]/table/tr[1]/td[2]/span/*");
+      insert("div", id: "destaques") {
+        insert("h1", "DESTAQUES");
+        move_here("../div[@id='listagem']/table[1]/tr[2]/td[2]/*") {
+          insert("div", class: "product_description") {
+            move_here("../table/tr[1]/td[1]/*");
           }
-          $("./span") {
-            insert("div", class: "product_description") {
-              move_here("../table/tr[1]/td[1]/*");
-            }
-            insert_at("top", "div", class: "product_image") {
-              move_here("../table/tr[1]/td[2]/*");
-            }
-            remove("./table");
+          insert_at("top", "div", class: "product_image") {
+            move_here("../table/tr[1]/td[2]/*");
           }
+          remove("./table");
         }
-        $("./tr[3]/td[2]/table") {
-          attribute("width", "auto");
+        insert("div", class: "controles") {
+          move_here("../../div[@id='listagem']/table[1]/tr[3]/td[2]/table/tr[1]/td[2]/span/*");
         }
-
       }
-      move_here(".//div[@class='lista_produto']");
-      remove("div[@id='listagem']/table[not(@width='100%')]");
-      remove("div[@id='listagem']/img");
+
+      move_here(".//div[@class='lista_produto']") {
+        insert("div", class: "border");
+      }
     };
 
     insert("div", id: "backblock", class: "menu");
@@ -54,4 +49,5 @@ $('./body/header') {
 $('./body') {
   remove(".//table[@id='conteudo_table']");
   remove(".//table[@id='rodape_table']");
+  remove(".//div[@id='listagem']");
 }
