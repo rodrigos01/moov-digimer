@@ -5,7 +5,7 @@ $('./body') {
 
   	insert("a", class: "button icons-user", href: "#", title: "Usuário");
 
-  	insert("a", class: "button icons-cart", href: "https://www.digimer.com.br/handler.php?module=site&action=view&section=pedido", title: "carrinho de compras");
+  	insert("a", class: "button icons-cart", href: "/handler.php?module=site&action=view&section=pedido", title: "carrinho de compras");
 
     insert("div", class: "loginBox") {
     	move_here("//form[@name='user']") {

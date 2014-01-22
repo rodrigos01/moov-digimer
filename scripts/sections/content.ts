@@ -6,9 +6,23 @@ $('./body/header') {
       insert("a", class: "button icons-menu", href: "#", title: "Menu");
 
       move_here("//form[@name='busca']"){
+
+        $('self::form') {
+          attribute("id", "busca");
+        }
+
         $('.//input') {
           attribute("placeholder", "busca");
         }
+
+        insert("div", class: "boxBusca") {
+          move_here("..//input");
+        }
+
+        insert("input", name: "onde_procurar", id: "onde_procurar", type: "hidden");
+        insert("input", name: "marca", id: "marca", type: "hidden");
+
+        insert_at("top", "input", class: "button icons-search", type: "submit", value: " ");
       }
       
     }

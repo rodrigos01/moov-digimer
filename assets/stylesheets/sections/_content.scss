@@ -6,7 +6,7 @@ div._content {
 	padding-top: 50px;
 
 	div.pannel {
-		background-color: white;
+		@include metalBar();
 		width: 100%;
 		position: fixed;
 		z-index: 3;
@@ -16,6 +16,7 @@ div._content {
 			@include button();
 			float: left;
 			margin: 0 9px;
+			border: none;
 		}
 
 		a.icons-menu {
@@ -24,11 +25,21 @@ div._content {
 
 		form[name='busca'] {
 			position: relative;
-			margin-right: 50px;
 			@include form();
 
-			input {
-				width: 100%;
+			div.boxBusca {
+				position: relative;
+				margin-right: 50px;
+				input {
+					width: 100%;
+				}
+			}
+			input.button.icons-search {
+				width: 32px;
+				@include button();
+				float: right;
+				border: none;
+				margin: 0 9px;
 			}
 		}
 

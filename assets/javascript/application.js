@@ -14,4 +14,10 @@ function listeners() {
 		$j(".menu").toggleClass("active");
 		e.stopPropagation();
 	});
+
+	$j("form#busca").submit(function(e) {
+		$j("#onde_procurar").val("");
+		$j("#marca").val("");
+		return true;
+	})
 }
