@@ -45,6 +45,7 @@ $('./body/header') {
 }
 
 $('./body') {
+  move_here("//script");
   remove(".//table[@id='conteudo_table']");
   remove(".//table[@id='rodape_table']");
 }
