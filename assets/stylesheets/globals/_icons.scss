@@ -1,7 +1,7 @@
 $icons-url: url("/_moovweb_local_assets_/images/icons.png");
 
 $icons-width: 36px;
-$icons-height: 131px;
+$icons-height: 235px;
 
 $icons-cart-x: 0px;
 $icons-cart-y: 0px;
@@ -13,13 +13,33 @@ $icons-menu-y: -33px;
 $icons-menu-width: 32px;
 $icons-menu-height: 32px;
 
+$icons-navback-x: 0px;
+$icons-navback-y: -66px;
+$icons-navback-width: 16px;
+$icons-navback-height: 16px;
+
+$icons-navback_large-x: 0px;
+$icons-navback_large-y: -42px;
+$icons-navback_large-width: 16px;
+$icons-navback_large-height: 16px;
+
+$icons-navnext-x: 0px;
+$icons-navnext-y: -118px;
+$icons-navnext-width: 16px;
+$icons-navnext-height: 16px;
+
+$icons-navnext_large-x: 0px;
+$icons-navnext_large-y: -68px;
+$icons-navnext_large-width: 16px;
+$icons-navnext_large-height: 16px;
+
 $icons-search-x: 0px;
-$icons-search-y: -66px;
+$icons-search-y: -170px;
 $icons-search-width: 32px;
 $icons-search-height: 32px;
 
 $icons-user-x: 0px;
-$icons-user-y: -99px;
+$icons-user-y: -203px;
 $icons-user-width: 32px;
 $icons-user-height: 32px;
 
@@ -35,14 +55,40 @@ $icons-user-height: 32px;
   height: 32px;
 }
 
-@mixin icons-search() {
+@mixin icons-navback() {
   background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -66px;
+  width: 16px;
+  height: 16px;
+}
+
+@mixin icons-navback_large() {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -42px;
+  @include background-size(18px 117.5px);
+  width: 16px;
+  height: 16px;
+}
+
+@mixin icons-navnext() {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -118px;
+  width: 16px;
+  height: 16px;
+}
+
+@mixin icons-navnext_large() {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -68px;
+  @include background-size(18px 117.5px);
+  width: 16px;
+  height: 16px;
+}
+
+@mixin icons-search() {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -170px;
   width: 32px;
   height: 32px;
 }
 
 @mixin icons-user() {
-  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -99px;
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -203px;
   width: 32px;
   height: 32px;
 }
@@ -59,14 +105,40 @@ $icons-user-height: 32px;
   height: 32px;
 }
 
-.icons-search {
+.icons-navback {
   background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -66px;
+  width: 16px;
+  height: 16px;
+}
+
+.icons-navback_large {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -42px;
+  background-size: 18px 117.5px;
+  width: 16px;
+  height: 16px;
+}
+
+.icons-navnext {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -118px;
+  width: 16px;
+  height: 16px;
+}
+
+.icons-navnext_large {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -68px;
+  background-size: 18px 117.5px;
+  width: 16px;
+  height: 16px;
+}
+
+.icons-search {
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -170px;
   width: 32px;
   height: 32px;
 }
 
 .icons-user {
-  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -99px;
+  background: url("/_moovweb_local_assets_/images/icons.png") no-repeat 0px -203px;
   width: 32px;
   height: 32px;
 }

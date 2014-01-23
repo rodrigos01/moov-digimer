@@ -2,4 +2,61 @@
 // Scope that in each file at the start
 ._home {
   
+	div#destaques {
+		margin: 1em;
+		border-radius: 10px;
+		box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6);
+
+		h1 {
+			@include metalBar();
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			margin: 0;
+			margin-bottom: 0.5em;
+			padding-bottom: 0.3em;
+			border-bottom: #004467 thin solid;
+			font-size: 1.5em;
+			color: #004467;
+			padding: 0.5em;
+		}
+
+		span {
+			padding: 0.5em;
+
+			div.product_description {
+				position: relative;
+				margin-right: 120px;
+			}
+
+			div.product_image {
+				float: right;
+				width: 120px;	
+			}
+
+		}
+
+		div.controles {
+			@include metalBar();
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+
+			.controlesContainer {
+				margin: 0 auto;
+				width: 202px;
+				padding: 8px 0;
+
+				a.nav {
+					display: inline-block;
+					margin: 0 5px;
+				}
+
+				span {
+					padding: 2px;
+				}
+			}
+		}
+
+
+	}
+
 }
