@@ -5,6 +5,9 @@ match($path) {
     log("--> This is an Ajax response.");
     @import ajax.ts
   }
+  with(/themes\/digimer\/js\/greybox/) {
+    log("--> Don't mess the images!!.");
+  }
   else() {
     match(inferred_content_type()) {
       with(/html/) {
