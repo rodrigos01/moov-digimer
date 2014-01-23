@@ -24,6 +24,7 @@
     add_assets()
 
     @import sections/script.ts
+    @import sections/head.ts
     @import sections/header.ts
     @import sections/content.ts
     @import sections/footer.ts
