@@ -15,6 +15,10 @@ function listeners() {
 		e.stopPropagation();
 	});
 
+	$j("#central").bind("DOMSubtreeModified", function() {
+		$j(".menu").removeClass("active");
+	});
+
 	$j("form#busca").submit(function(e) {
 		$j("#onde_procurar").val("");
 		$j("#marca").val("");

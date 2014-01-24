@@ -11,7 +11,11 @@ $("./head") {
 	insert("link", rel: "apple-touch-icon-precomposed", sizes: "128x128", href: asset("images/touchicon.png"));
 	insert("link", rel: "icon", type: "image/x-icon", href: asset("images/favicon.ico"));
 
-	insert_javascript('var GB_ROOT_DIR = "https://mlocal.digimer.com.br:8443/themes/digimer/js/greybox/";');
+	$urlGbRootDir = "https://digimer.com.br/themes/digimer/js/greybox/";
+	$urlGbRootDir {
+		rewrite("link");
+	}
+	insert_javascript('var GB_ROOT_DIR = "' + $urlGbRootDir + '";');
 	insert("script", type: "text/javascript", src: "/themes/digimer/js/greybox/AJS.js");
 	insert("script", type: "text/javascript", src: "/themes/digimer/js/greybox/AJS_fx.js");
 	insert("script", type: "text/javascript", src: "/themes/digimer/js/greybox/gb_scripts.js");
