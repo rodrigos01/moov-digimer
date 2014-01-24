@@ -18,21 +18,13 @@ match($status) {
     log("--> STATUS: 200")
 
     match($path) {
-      with(/handler\.php\?module=site&action=view/) {
-        log("--> Importing pages/home.ts in mappings.ts")
-        @import pages/home.ts
-      }
-      with(/handler\.php\?module=site&action=view&#buscar|handler\.php\?module=site&action=view&#afinidade/) {
-        log("--> Importing pages/category.ts in mappings.ts")
-        @import pages/category.ts
-      }
-      with(/handler\.php\?module=site&action=view&#produto/) {
-        log("--> Importing pages/product.ts in mappings.ts")
-        @import pages/product.ts
-      }
       with(/handler\.php\?module=site&action=view&section=pedido/) {
         log("--> Importing pages/cart.ts in mappings.ts")
         @import pages/cart.ts
+      }
+      with(/handler\.php\?module=site&action=view/) {
+        log("--> Importing pages/home.ts in mappings.ts")
+        @import pages/home.ts
       }
       else() {
         log("--> No page match in mappings.ts")
